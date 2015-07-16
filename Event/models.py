@@ -35,14 +35,16 @@ class Event(models.Model):
 
 
 class Ticket(models.Model):
-    type = models.CharField(max_length=20)
-    price = models.IntegerField
     event = models.ForeignKey(Event)
+    type = models.CharField(max_length=20)
+    capacity = models.IntegerField
+    sold = models.IntegerField
+    price = models.IntegerField
 
 
 class BoughtTicket(models.Model):
     ticket = models.ForeignKey(Ticket)
-    serial_no = models.BigIntegerField
     buyer = models.ForeignKey(Customer)
+    serial_no = models.BigIntegerField
 
 
