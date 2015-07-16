@@ -2,6 +2,22 @@ from django.db import models
 from User.models import EventOrganizer, Customer
 from django.core.exceptions import ValidationError
 
+
+class Venue(models.Model):
+    name = models.CharField(max_length=40)
+    address = models.CharField(max_length=80)
+    # decompose address as city, street, number
+
+
+class Type(models.Model):
+    name = models.CharField(max_length=20)
+
+
+class SubType(models.Model):
+    name = models.CharField(max_length=40)
+    type = models.ForeignKey(Type)
+
+
 class Event(models.Model):
     title = models.CharField(max_length=40)
     description = models.CharField(max_length=100)
@@ -18,15 +34,6 @@ class Event(models.Model):
             raise ValidationError('sub_type should actually be a sub-type of type!')
 
 
-class Type(models.Model):
-    name = models.CharField(max_length=20)
-
-
-class SubType(models.Model):
-    name = models.CharField(max_length=40)
-    type = models.ForeignKey(Type)
-
-
 class Ticket(models.Model):
     type = models.CharField(max_length=20)
     price = models.IntegerField
@@ -39,7 +46,3 @@ class BoughtTicket(models.Model):
     buyer = models.ForeignKey(Customer)
 
 
-class Venue(models.Model):
-    name = models.CharField(max_length=40)
-    address = models.CharField(max_length=80)
-    # decompose address as city, street, number
