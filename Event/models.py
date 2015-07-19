@@ -1,6 +1,8 @@
 from django.db import models
 from User.models import EventOrganizer, Customer
 from django.core.exceptions import ValidationError
+from django.utils.timezone import now
+from Lib.datetime import datetime
 
 
 class Venue(models.Model):
@@ -21,7 +23,8 @@ class SubType(models.Model):
 class Event(models.Model):
     title = models.CharField(max_length=40)
     description = models.CharField(max_length=100)
-    date_time = models.DateTimeField
+    date = models.DateField(default=now().date())
+    time = models.TimeField(default=now().time())
     # img =
     venue = models.ForeignKey(Venue)
     type = models.ForeignKey(Type)
@@ -37,14 +40,14 @@ class Event(models.Model):
 class Ticket(models.Model):
     event = models.ForeignKey(Event)
     type = models.CharField(max_length=20)
-    capacity = models.IntegerField
-    sold = models.IntegerField
-    price = models.IntegerField
+    capacity = models.IntegerField(default=0)
+    sold = models.IntegerField(default=0)
+    price = models.IntegerField(default=0)
 
 
 class BoughtTicket(models.Model):
     ticket = models.ForeignKey(Ticket)
     buyer = models.ForeignKey(Customer)
-    serial_no = models.BigIntegerField
+    serial_no = models.BigIntegerField(null=True, blank=True)
 
 
