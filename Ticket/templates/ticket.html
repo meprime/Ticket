@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+{% extends 'general_template.html' %}
+
+{% block header_extension %}
+    {% load static %}
     <meta charset="UTF-8">
     <title></title>
     <style>
@@ -11,7 +12,7 @@
             background: linear-gradient(right,#001030, blue); /* Standard syntax */
         }
 
-        .container{
+        .ticket-container{
             padding-top: 50px;
         }
 
@@ -24,17 +25,17 @@
             text-align: center;
         }
     </style>
-    <link href="../static/css/bootstrap.css" rel='stylesheet' type='text/css' />
-</head>
-<body dir="rtl">
-    <div class="container">
+{% endblock %}
+
+{% block main_content %}
+    <div class="container ticket-container">
         <div class="col-md-12 row" style="border:1px solid #000000;">
             <div class="row header">
-                <img src="../static/images/logo-small.png">
+                <img src="{% static "images/logo-small.png" %}">
         </div>
             <div class="row">
                 <div class="col-md-2 bar-code">
-                    <img src="../static/images/qr.png" width="100%">
+                    <img src="{% static "images/qr.png" %}" width="100%">
                 </div>
                 <div class="col-md-7 ticket-body">
                         <h3>
@@ -78,5 +79,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

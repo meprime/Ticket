@@ -26,3 +26,7 @@ def new_event(request):
         'event_form': event_form,
         'venue_form': venue_form,
     })
+
+
+def show_ticket(request):
+    return render(request, 'ticket.html')
