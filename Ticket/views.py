@@ -11,3 +11,7 @@ def contact_us(request):
 
 def user_tickets(request):
     return render(request, 'user_tickets.html')
+
+
+def organizer_all_events(request):
+    return render(request, 'organizer_events_list.html')

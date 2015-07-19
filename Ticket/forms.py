@@ -49,3 +49,9 @@ class NewTicketTypeForm(forms.ModelForm):
             'capacity': _('ظرفیت'),
             'price': _('قیمت'),
         }
+
+
+class UserUpdateForm(forms.Form):
+    password = forms.CharField(max_length=50, widget=forms.PasswordInput(), required=True, label='رمز عبور جدید')
+    confirm_password = forms.CharField(max_length=50, widget=forms.PasswordInput(), required=True, label='تأیید رمز عبور')
+    nl_memb = forms.BooleanField(label='عضویت در خبرنامه')  #newsletter membership
