@@ -1,0 +1,35 @@
+{% extends 'general_template.html' %}
+
+{% block header_extension %}
+    {% load static %}
+{% endblock %}
+
+
+{% block main_content %}
+    <div class="arriv">
+    <div class="container">
+        <h2 style="padding-top: 50px; padding-bottom: 70px;">
+            بلیت‌های خریداری‌شده‌ی قبلی شما:
+        </h2>
+        <table class="table table-hover">
+            <thead>
+            <th class="text-right">رویداد</th>
+            <th class="text-right">تاریخ رویداد</th>
+            <th class="text-right">تاریخ خرید بلیت</th>
+            <th class="text-right">نوع بلیت</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>فوتبال</td> <td>۱۱/۱۱/۲۰۱۵</td> <td>۱۱/۱۰/۲۰۱۵</td> <td>درجه‌ی یک</td>
+            </tr>
+            <tr>
+                <td>فیلم</td> <td>۱۱/۱۱/۲۰۱۵</td> <td>۱۱/۱۰/۲۰۱۵</td> <td>درجه‌ی دو</td>
+            </tr>
+            <tr>
+                <td>کنسرت</td> <td>۱۱/۱۱/۲۰۱۵</td> <td>۱۱/۱۰/۲۰۱۵</td> <td>درجه‌ی یک</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+{% endblock %}
