@@ -16,6 +16,9 @@ class NewEventForm(forms.ModelForm):
             'type': _('دسته'),
             'sub_type': _('زیردسته'),
         }
+        widgets = {
+            'date': forms.DateInput(attrs={'class': 'datepicker'})
+        }
 
 
 class UpdateEventForm(forms.ModelForm):  # used for organizer to update some properties of her event
@@ -27,6 +30,9 @@ class UpdateEventForm(forms.ModelForm):  # used for organizer to update some pro
             'date': _('تاریخ'),
             'time': _('زمان'),
             'venue': _('مکان'),
+        }
+        widgets = {
+            'date': forms.DateInput(attrs={'class': 'datepicker'})
         }
 
 

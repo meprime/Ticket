@@ -3,6 +3,18 @@
 {% block header_extension %}
     {% load static %}
     <link href="{% static "form_style.css" %}" rel="stylesheet">
+    <link type="text/css" href="{% static "css/jquery-ui-1.8.14.css" %}" rel="stylesheet" />
+    <script type="text/javascript" src="{% static "js/jquery-1.6.2.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.ui.core.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.ui.datepicker-cc.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/calendar.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.ui.datepicker-cc-fa.js" %}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+        $('.datepicker').datepicker();
+    });
+    </script>
 {% endblock %}
 
 {% block main_content %}
@@ -69,7 +81,7 @@
 
     <div class="container col-md-6">
         <div class="">
-            <img src="{% static "images/9.jpg" %}" class="img-rounded" height="250px">
+            <img src="{% static "images/pepe.jpg" %}" class="img-rounded" height="250px">
         </div>
         <div class="">
             <dl class="">
