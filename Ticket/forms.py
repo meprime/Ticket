@@ -1,3 +1,4 @@
+# coding=utf-8
 from django import forms
 from Ticket.models import ContactMessage
 from Event.models import Event, Venue, Ticket

@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.shortcuts import render
 from Ticket.forms import *
 
@@ -30,3 +31,7 @@ def new_event(request):
 
 def show_ticket(request):
     return render(request, 'ticket.html')
+
+
+def details(request):
+    return render(request, 'details.html')

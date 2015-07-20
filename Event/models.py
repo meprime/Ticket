@@ -1,8 +1,8 @@
 from django.db import models
-from User.models import EventOrganizer, Customer
 from django.core.exceptions import ValidationError
 from django.utils.timezone import now
-from Lib.datetime import datetime
+
+from User.models import EventOrganizer, Customer
 
 
 class Venue(models.Model):

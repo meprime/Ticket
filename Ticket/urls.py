@@ -13,5 +13,7 @@ urlpatterns = [
     url(r'^my-tickets/', 'Ticket.views.user_tickets'),
     url(r'^checkout/', 'Ticket.views.checkout'),
     url(r'^user-profile/', 'User.views.user_profile'),
-    url(r'^search/', 'Ticket.views.search')
+    url(r'^search/', 'Ticket.views.search'),
+    url(r'^details/$', 'Event.views.details')
+
 ]

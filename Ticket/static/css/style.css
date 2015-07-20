@@ -107,7 +107,6 @@ body a:visited, body a:focus{
   margin: 0 -1px -1px 5px;
   float: right;
   padding-left: 20px;
-  background: url(../images/flash.png) no-repeat left top;
     background-size: auto 38px;
     /*center center fixed;*/
         /*-webkit-background-size: cover;*/
@@ -3744,7 +3743,7 @@ ul.grid_2 li {
 .sky-form .radio input,
 .sky-form .checkbox input {
     position: absolute;
-    left: -9999px;
+    right: -9999px;
 }
 
 .sky-form .radio i,
@@ -6319,3 +6318,22 @@ p.cart a {
     }
 }
 
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
+  cursor: pointer;
+}
+
+#favorite-star {
+font-size: 38px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#favorite-star:hover {
+    color: #ffff00;
+}
+
+.filled-star {
+    color: #ffff00;
+}
