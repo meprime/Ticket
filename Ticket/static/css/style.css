@@ -6349,3 +6349,10 @@ font-size: 38px;
   font-family: Calibri,Arial;
   font-size: 15px;
 }
+
+.cart-item-info > h1 > a:hover {
+    color: #ff0000;
+}
+.cart-item-info > h1 > a{
+    color: orangered;
+}
