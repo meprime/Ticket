@@ -4,7 +4,7 @@ from Ticket.forms import *
 
 
 def single_event(request):
-    return render(request, 'event.html')
+    return render(request, 'details.html')
 
 
 def organizer_event(request):
