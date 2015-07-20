@@ -19,3 +19,7 @@ def organizer_all_events(request):
 
 def search(request):
     return render(request, 'shop.html')
+
+
+def checkout(request):
+    return render(request, 'checkout.html')
