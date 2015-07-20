@@ -15,6 +15,7 @@
 {
     position: relative;
     height: 30px;
+    padding-right: 5px;
     background: #eeeeee;
 }
 .second-level-menu > li:hover { background: #CCCCCC; }
@@ -32,6 +33,7 @@
     float: right;
     height: 30px;
     width: 150px;
+    padding-right: 5px;
     background: #EEEEEE;
 }
 .top-level-menu > li:hover { background: #CCCCCC; }
