@@ -8,21 +8,22 @@
     padding: 0;
     margin: 0;
     display: none;
+    z-index: 1000;
 }
 
 .second-level-menu > li
 {
     position: relative;
     height: 30px;
-    background: #999999;
+    background: #eeeeee;
 }
 .second-level-menu > li:hover { background: #CCCCCC; }
 
 .top-level-menu
 {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .top-level-menu > li
@@ -31,7 +32,7 @@
     float: right;
     height: 30px;
     width: 150px;
-    background: #999999;
+    background: #EEEEEE;
 }
 .top-level-menu > li:hover { background: #CCCCCC; }
 
@@ -47,7 +48,7 @@
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
     font: bold 14px Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
+    color: #222222;
     text-decoration: none;
     padding: 0 0 0 10px;
 

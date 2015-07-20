@@ -2,11 +2,11 @@
 
 {% block header_extension %}
     {% load static %}
-    <link href="../static/css/prettyPhoto.css" rel="stylesheet">
-    <link href="../static/css/price-range.css" rel="stylesheet">
-    <link href="../static/css/animate.css" rel="stylesheet">
-	<link href="../static/css/main.css" rel="stylesheet">
-	<link href="../static/css/responsive.css" rel="stylesheet">
+    <link href="{% static "css/prettyPhoto.css" %}" rel="stylesheet">
+    <link href="{% static "css/price-range.css" %}" rel="stylesheet">
+    <link href="{% static "css/animate.css" %}" rel="stylesheet">
+	<link href="{% static "css/main.css" %}" rel="stylesheet">
+	<link href="{% static "css/responsive.css" %}" rel="stylesheet">
 {% endblock %}
 {% block main_content %}
 	<section>
@@ -18,7 +18,7 @@
             <ul class="grid_2">
                 <li class="pull-right">
                     <div>
-                        <a href="details.html" class="portfolio-link">
+                        <a href="/event" class="portfolio-link">
                             <div class="caption">
                                 <div class="caption-content">
                                     <p>
@@ -68,7 +68,7 @@
                 </li>
                 <li class="pull-right">
                     <div>
-                        <a href="details.html" class="portfolio-link"><img src="{% static "images/20off.png" %}" class="off"><div class="caption">
+                        <a href="/event" class="portfolio-link"><img src="{% static "images/20off.png" %}" class="off"><div class="caption">
                                 <div class="caption-content">
                                     <p>
                                         <i class="fa fa-calendar"></i>
@@ -114,7 +114,7 @@
                 </li>
                 <li class="pull-right">
                     <div>
-                        <a href="details.html" class="portfolio-link">
+                        <a href="/event" class="portfolio-link">
                             <div class="caption">
                                 <div class="caption-content">
                                     <p>
@@ -160,7 +160,7 @@
                 <div class="clearfix" style="padding-bottom: 10px"></div>
                 <li class="pull-right">
                     <div>
-                        <a href="details.html" class="portfolio-link"><img src="{% static "images/20off.png" %}" class="off">
+                        <a href="/event" class="portfolio-link"><img src="{% static "images/20off.png" %}" class="off">
                             <div class="caption">
                                 <div class="caption-content">
                                     <p>
@@ -313,10 +313,8 @@
 {% endblock %}
 
   {% block end_extra %}
-    <script src="../static/js/jquery-1.11.1.min.js"></script>
-	<script src="../static/js/price-range.js"></script>
-    <script src="../static/js/jquery.scrollUp.min.js"></script>
-	<script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/jquery.prettyPhoto.js"></script>
-    <script src="../static/js/main.js"></script>
+	<script src="{% static "js/price-range.js" %}"></script>
+    <script src="{% static "js/jquery.scrollUp.min.js" %}"></script>
+    <script src="{% static "js/jquery.prettyPhoto.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
 {% endblock %}

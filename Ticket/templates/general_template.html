@@ -39,8 +39,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         font-family: myFontFamily;
         src: url(../static/fonts/Yekan.ttf);
     }
-    body, h1, h2, h3, h4, h5, h6 {
-        font-family: myFontFamily;
+    body, h1, h2, h3, h4, h5, h6, li, a {
+        font-family: myFontFamily !important;
     }
     .clickable-row {
         cursor: pointer;
@@ -116,37 +116,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </nav>
 
 <div class="header_bg">
-	<div class="container">
-		<div class="header">
-			<br><br><br>
-			<!-- start header menu -->
-			<ul class="megamenu skyblue">
-				<li class="grid"><a class="color1 pull-right" href="index.html">صفحه اصلی</a></li>
-				<li class="grid"><a class="color2 pull-right" href="sport.html">ورزشی</a></li>
-				<li class="grid"><a class="color3 pull-right" href="sport.html">تئاتر</a></li>
-				<li class="grid"><a class="color4 pull-right" href="sport.html">سینما</a></li>
-				<li class="grid"><a class="color5 pull-right" href="sport.html">کنسرت</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<div class="header_bg">
     <div class="container">
+        <br/><br/>
+        &nbsp &nbsp &nbsp
         <ul class="top-level-menu">
             <li>
                 <a href="#">ورزشی</a>
+                <ul class="second-level-menu">
+                    <li><a href="#">فوتبال</a></li>
+                    <li><a href="#">والیبال</a></li>
+                    <li><a href="#">کشتی</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">کنسرت</a>
+                <ul class="second-level-menu">
+                    <li><a href="#">کلاسیک</a></li>
+                    <li><a href="#">پاپ</a></li>
+                </ul>
             </li>
             <li>
-                <a href="#">فیلم</a>
+                <a href="#">سینما</a>
                 <ul class="second-level-menu">
-                    <li><a href="#">Chicago</a></li>
-                    <li><a href="#">Los Angeles</a></li>
-                    <li><a href="#">New York</a></li>
-                    <li><a href="#">Seattle</a></li>
+                    <li><a href="#">درام</a></li>
+                    <li><a href="#">کمدی</a></li>
+                    <li><a href="#">تراژدی</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">تئاتر</a>
+                <ul class="second-level-menu">
+                    <li><a href="#">درام</a></li>
+                    <li><a href="#">کمدی</a></li>
+                    <li><a href="#">تراژدی</a></li>
                 </ul>
             </li>
         </ul>
