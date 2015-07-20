@@ -15,3 +15,7 @@ def user_tickets(request):
 
 def organizer_all_events(request):
     return render(request, 'organizer_events_list.html')
+
+
+def search(request):
+    return render(request, 'shop.html')
