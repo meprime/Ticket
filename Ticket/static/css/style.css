@@ -6337,3 +6337,15 @@ font-size: 38px;
 .filled-star {
     color: #ffff00;
 }
+
+.my-menu {
+  background: #EEEEEE;
+  margin-bottom: 0px;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  font-family: Calibri,Arial;
+  font-size: 15px;
+}

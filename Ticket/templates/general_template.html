@@ -30,7 +30,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="{% static "css/megamenu.css" %}" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="{% static "engine0/style.css" %}"/>
 <script type="text/javascript" src="{% static "js/megamenu.js" %}"></script>
-{#<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>#}
 <script src="{% static "js/menu_jquery.js" %}"></script>
 <script src="{% static "js/bootstrap.min.js" %}"></script>
 
@@ -119,9 +118,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <br/><br/>
         &nbsp &nbsp &nbsp
-        <ul class="top-level-menu">
+        <ul class="top-level-menu my-menu skyblue">
             <li>
-                <a href="#">ورزشی</a>
+                <a class="color1" href="/">خانه</a>
+            </li>
+            <li>
+                <a class="color2" href="#">ورزشی</a>
                 <ul class="second-level-menu">
                     <li><a href="#">فوتبال</a></li>
                     <li><a href="#">والیبال</a></li>
@@ -129,14 +131,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </li>
             <li>
-                <a href="#">کنسرت</a>
+                <a class="color3" href="#">کنسرت</a>
                 <ul class="second-level-menu">
                     <li><a href="#">کلاسیک</a></li>
                     <li><a href="#">پاپ</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">سینما</a>
+                <a class="color4" href="#">سینما</a>
                 <ul class="second-level-menu">
                     <li><a href="#">درام</a></li>
                     <li><a href="#">کمدی</a></li>
@@ -144,7 +146,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </li>
             <li>
-                <a href="#">تئاتر</a>
+                <a class="color5" href="#">تئاتر</a>
                 <ul class="second-level-menu">
                     <li><a href="#">درام</a></li>
                     <li><a href="#">کمدی</a></li>
