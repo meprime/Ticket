@@ -3,7 +3,7 @@ from Ticket.forms import *
 
 
 def single_event(request):
-    pass
+    return render(request, 'event.html')
 
 
 def organizer_event(request):

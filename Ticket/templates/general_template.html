@@ -16,6 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="{% static "css/bootstrap.css" %}" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="{% static "fonts/font-awesome-4.3.0/css/font-awesome.min.css" %}"/>
 <link href="{% static "css/style.css" %}" rel='stylesheet' type='text/css' />
+<link href="{% static "css/two_level_menu.css" %}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +42,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     body, h1, h2, h3, h4, h5, h6 {
         font-family: myFontFamily;
     }
+    .clickable-row {
+        cursor: pointer;
+    }
 </style>
+
+<script>
+    jQuery(document).ready(function($) {
+        $(".clickable-row").click(function() {
+            window.document.location = $(this).data("href");
+        });
+    });
+</script>
 
     {% block header_extension %} <!-- HEADER EXTENSION --> {% endblock %}
 
@@ -102,6 +114,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+<div class="header_bg">
+	<div class="container">
+		<div class="header">
+			<br><br><br>
+			<!-- start header menu -->
+			<ul class="megamenu skyblue">
+				<li class="grid"><a class="color1 pull-right" href="index.html">صفحه اصلی</a></li>
+				<li class="grid"><a class="color2 pull-right" href="sport.html">ورزشی</a></li>
+				<li class="grid"><a class="color3 pull-right" href="sport.html">تئاتر</a></li>
+				<li class="grid"><a class="color4 pull-right" href="sport.html">سینما</a></li>
+				<li class="grid"><a class="color5 pull-right" href="sport.html">کنسرت</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="header_bg">
+    <div class="container">
+        <ul class="top-level-menu">
+            <li>
+                <a href="#">ورزشی</a>
+            </li>
+            <li>
+                <a href="#">کنسرت</a>
+            </li>
+            <li>
+                <a href="#">فیلم</a>
+                <ul class="second-level-menu">
+                    <li><a href="#">Chicago</a></li>
+                    <li><a href="#">Los Angeles</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">Seattle</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 
 
 {% block main_content %} <!-- MAIN CONTENT --> {% endblock %}
