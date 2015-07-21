@@ -43,3 +43,6 @@ def concert(request):
 
 def classic(request):
     return render(request, 'classic.html')
+
+def details2(request):
+    return render(request, 'details2.html')

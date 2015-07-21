@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^user-profile/', 'User.views.user_profile'),
     url(r'^search/', 'Ticket.views.search'),
     url(r'^details/$', 'Event.views.details'),
-    url(r'^details/$', 'Event.views.details'),
+    url(r'^details2/$', 'Event.views.details2')
     url(r'^concert/$', 'Event.views.concert'),
     url(r'^concert/classic/$', 'Event.views.classic'),
     url(r'^fake_bank$', 'Ticket.views.bank'),
