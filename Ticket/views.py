@@ -25,8 +25,17 @@ def checkout(request):
     return render(request, 'checkout.html')
 
 
+def bank(request):
+    return render(request, 'fake_bank.html')
+
+
+def code(request):
+    return render(request, 'code.html')
+
+
 def forgot_password(request):
     form = ForgotPasswordForm()
     return render(request, 'forgot_password.html', {
         'form': form,
     })
+
