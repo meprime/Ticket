@@ -35,3 +35,10 @@ def show_ticket(request):
 
 def details(request):
     return render(request, 'details.html')
+
+
+def concert(request):
+    return render(request, 'concert.html')
+
+def classic(request):
+    return render(request, 'classic.html')
