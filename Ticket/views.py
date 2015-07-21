@@ -19,3 +19,11 @@ def organizer_all_events(request):
 
 def search(request):
     return render(request, 'shop.html')
+
+
+def bank(request):
+    return render(request, 'fake_bank.html')
+
+
+def code(request):
+    return render(request, 'code.html')
