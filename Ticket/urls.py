@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^checkout/', 'Ticket.views.checkout'),
     url(r'^user-profile/', 'User.views.user_profile'),
     url(r'^search/', 'Ticket.views.search'),
+    url(r'^forgot-password/', 'Ticket.views.forgot_password'),
     url(r'^details/$', 'Event.views.details')
 
 ]

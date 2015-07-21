@@ -1,6 +1,8 @@
 # coding=utf-8
 from django import forms
 from Ticket.models import ContactMessage
+from django.contrib.auth.models import User
+from User.models import Customer
 from Event.models import Event, Venue, Ticket
 from django.utils.translation import ugettext_lazy as _
 
@@ -59,6 +61,28 @@ class NewTicketTypeForm(forms.ModelForm):
         }
 
 
+class UserRegistrationForm(forms.ModelForm):
+    confirm_password = forms.CharField(widget=forms.PasswordInput(), label='تأیید رمز عبور')
+    class Meta:
+        model = User
+        fields = ['username', 'password', 'email']
+        labels = {
+            'username': _('نام کاربری'),
+            'password': _('رمز عبور'),
+            'email': _('ایمیل'),
+        }
+
+
+class CustomerRegistrationForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = ['phone_no', 'gender']
+        labels = {
+            'phone_no': _('شماره‌ی تماس'),
+            'gender': _('جنسیت'),
+        }
+
+
 class UserUpdateForm(forms.Form):
     password = forms.CharField(max_length=50, widget=forms.PasswordInput(), required=True, label='رمز عبور جدید')
     confirm_password = forms.CharField(max_length=50, widget=forms.PasswordInput(), required=True, label='تأیید رمز عبور')
@@ -69,3 +93,7 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = ContactMessage
         exclude = []
+
+
+class ForgotPasswordForm(forms.Form):
+    email = forms.EmailField()

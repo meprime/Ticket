@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from Ticket.forms import ForgotPasswordForm
 
 def index(request):
     return render(request, 'index.html')
@@ -23,3 +23,10 @@ def search(request):
 
 def checkout(request):
     return render(request, 'checkout.html')
+
+
+def forgot_password(request):
+    form = ForgotPasswordForm()
+    return render(request, 'forgot_password.html', {
+        'form': form,
+    })

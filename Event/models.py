@@ -10,14 +10,23 @@ class Venue(models.Model):
     address = models.CharField(max_length=80)
     # decompose address as city, street, number
 
+    def __str__(self):
+        return self.name
+
 
 class Type(models.Model):
     name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
 
 
 class SubType(models.Model):
     name = models.CharField(max_length=40)
     type = models.ForeignKey(Type)
+
+    def __str__(self):
+        return self.name
 
 
 class Event(models.Model):
@@ -31,10 +40,15 @@ class Event(models.Model):
     sub_type = models.ForeignKey(SubType)
     organizer = models.ForeignKey(EventOrganizer)
 
+    '''
     def clean(self):
         super(self)
         if SubType.objects.get(id=self.sub_type).type_id != self.type:
             raise ValidationError('sub_type should actually be a sub-type of type!')
+    '''
+
+    def __str__(self):
+        return self.title
 
 
 class Ticket(models.Model):
